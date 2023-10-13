@@ -1,3 +1,3 @@
 export function JobLists() {
-  return (<h1>Hi JobLists</h1>);
+  return <h1>Hi JobLists</h1>;
 }
