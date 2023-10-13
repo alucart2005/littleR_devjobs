@@ -1,13 +1,15 @@
-import './App.css'
-import { Header } from './components/Header'
+import "./App.css";
+import { Header } from "./components/Header";
+import { MyRoutes } from "./routers/routers";
 
 
 function App() {
   return (
     <div className="App">
-      <Header/>
+      <Header />
+      <MyRoutes/>
     </div>
-  )
+  );
 }
 
-export default App
+export default App;
