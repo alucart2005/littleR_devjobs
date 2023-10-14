@@ -7,14 +7,21 @@ export function JobLists() {
 
   return (
     <section>
-      <div>
-        {jobData.map((item, index) => ( // Start MAPPING
-          <div key={index}>
-            <div>
-              <h6>{item.postedAt}</h6>
+      <div className="job__item">
+        {jobData.map((item) => (
+            <div key={item.id}>
+              <div className="job__content">
+                <h6>{item.postedAt} - {item.contract}</h6>
+                <h1>
+                  <Link to={`/jobs:${item.position}`}> {/* Link comes from react-router-dom*/}
+                  {item.position}
+                  </Link>
+                </h1>
+                <p>{item.company}</p>
+              </div>
             </div>
-          </div>
-        ))}
+          )
+        )}
       </div>
     </section>
   );
