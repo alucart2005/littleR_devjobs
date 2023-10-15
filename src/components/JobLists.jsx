@@ -15,6 +15,20 @@ export function JobLists() {
     setJobData(filteredData);
   };
 
+  const filterJobData = (e) => {
+    const filterValue = e.target.value;
+    if (filterValue === "full-time") {
+      const filterdData = jobs.filter((job) => job.contract === "Full Time");
+      setJobData(filterdData);
+    } else if (filterValue === "part-time") {
+      const filterdData = jobs.filter((job) => job.contract === "Part Time");
+      setJobData(filterdData);
+    }else if (filterValue === "freelance") {
+      const filterdData = jobs.filter((job) => job.contract === "Freelance");
+      setJobData(filterdData);
+    }
+  };
+
   return (
     <section className="job__list">
       <div className="container">
@@ -28,7 +42,6 @@ export function JobLists() {
                 onChange={(e) => setSearchTerm(e.target.value)}
               />
             </div>
-
             <div className="search__panel-02">
               <input
                 type="text"
@@ -37,6 +50,16 @@ export function JobLists() {
                 onChange={(e) => setSearchByLocation(e.target.value)}
               />
               <button onClick={locationSearchHandler}>Search</button>
+            </div>
+
+            <div className="search__panel3">
+              <select onChange={filterJobData}>
+                <option >Filter work by</option>
+                <option value="full-time">Full Time</option>
+                <option value="part-time">Part Time</option>
+                <option value="freelance">Freelance</option>
+
+              </select>
             </div>
 
           </div>
@@ -52,6 +75,7 @@ export function JobLists() {
               })
               .map((item) => (
                 <div className="job__item" key={item.id}>
+                  <img src={item.logo} alt="item.logo" />
                   <div className="job__content">
                     <h6>
                       {item.postedAt} - {item.contract}
