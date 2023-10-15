@@ -4,8 +4,16 @@ import { useState } from "react";
 
 export function JobLists() {
   const [jobData, setJobData] = useState(jobs);
-  const [searchTerm, setSearchTerm] = useState([]);
+  const [searchTerm, setSearchTerm] = useState("");
+  const [searchByLocation, setSearchByLocation] = useState("");
   const searchTermValue = searchTerm.toLowerCase();
+
+  const locationSearchHandler = () => {
+    const filteredData = jobs.filter((job) =>
+      job.location.toLowerCase().includes(searchByLocation.toLowerCase())
+    );
+    setJobData(filteredData);
+  };
 
   return (
     <section className="job__list">
@@ -20,6 +28,17 @@ export function JobLists() {
                 onChange={(e) => setSearchTerm(e.target.value)}
               />
             </div>
+
+            <div className="search__panel-02">
+              <input
+                type="text"
+                placeholder="Search by location"
+                value={searchByLocation}
+                onChange={(e) => setSearchByLocation(e.target.value)}
+              />
+              <button onClick={locationSearchHandler}>Search</button>
+            </div>
+
           </div>
           <div className="jobs__wrapper">
             {jobData
