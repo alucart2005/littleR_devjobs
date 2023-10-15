@@ -9,7 +9,7 @@ export function MyRoutes() {
       <Routes>
         <Route exact path="/" element={<JobLists/>}/>
         <Route exact path="/jobs" element={<JobLists/>}/>
-        <Route exact path="/jobs:position" element={<JobDetails/>}/>
+        <Route exact path="/jobs/:position" element={<JobDetails/>}/>
       </Routes>
     </Router>
   );
