@@ -81,9 +81,7 @@ export function JobLists() {
                       {item.postedAt} - {item.contract}
                     </h6>
                     <h1>
-                      <Link to={`/jobs:${item.position}`}>
-                        {" "}
-                        {/* Link comes from react-router-dom*/}
+                      <Link to={`/jobs/${item.position}`}>
                         {item.position}
                       </Link>
                     </h1>
