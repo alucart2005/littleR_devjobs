@@ -53,7 +53,7 @@ export function JobLists() {
             </div>
 
             <div className="search__panel-03">
-              <select onChange={filterJobData}>
+              <select className="btn" onChange={filterJobData}>
                 <option >Filter work by</option>
                 <option value="full-time">Full Time</option>
                 <option value="part-time">Part Time</option>

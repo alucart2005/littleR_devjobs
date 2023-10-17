@@ -48,7 +48,7 @@ p {
 .job__list__wrapper {
   padding: 30px;
   margin-top: -30px;
-  background: #d0afaf;
+  background: #fffdfe;
   border-radius: 10px;
 }
 .search__panel {
@@ -95,7 +95,7 @@ p {
   margin-top: 80px;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
   flex-wrap: wrap;
 }
 .job__item {
@@ -107,45 +107,106 @@ img {
   height: 50px;
   margin-bottom: 15px;
 }
-.job__content h6{
+.job__content h6 {
   font-size: 0.9rem;
   font-weight: 400;
   color: #777;
   margin-bottom: 10px;
 }
-.job__content h1{
+.job__content h1 {
   margin-bottom: 10px;
 }
-.job__content h1 a{
+.job__content h1 a {
   text-decoration: none;
   color: #000;
 }
-.location p{
+.location p {
   margin-top: 30px;
 }
-.location p span{
+.location p span {
   color: #7c5dfa;
 }
-.details__wrapper {  /* ??? */
+.details__wrapper {
+  /* ??? */
   margin-top: -initial;
   padding: 30px;
   background: #fff;
   border-radius: 10px;
 }
-.details__top{
+.details__top {
   display: flex;
   align-items: center;
   margin-bottom: 30px;
   justify-content: space-between;
 }
-.details__top button{
+.details__top button {
   padding: 7px 25px;
   border-radius: 5px;
   background: #7c5dfa3b;
   border: none;
 }
-.details__top button a{
+.details__top button a {
   text-decoration: none;
   color: #7c5dfa;
 }
 
+.requirements h1 {
+  margin-bottom: 10px;
+}
+.responsibility h1 {
+  margin-top: 50px;
+  margin-bottom: 20px;
+}
+.requirement__item,
+.responsibility__item {
+  padding: 30px;
+}
+.requirement__item li,
+.responsibility__item li {
+  margin-bottom: 10px;
+  margin-left: 5px;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+@media only screen and (max-width: 1200px) {
+  .container {
+    width: 100%;
+    padding: 0 30px;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  h1,
+  h2 {
+    font-size: 1.2rem;
+  }
+  .job__item {
+    width: 300px;
+  }
+  .search__panel {
+    row-gap: 1rem;
+  }
+  .search__panel-01,
+  .search__panel-03 select {
+    padding: 7px 20px;
+  }
+  .search__panel-02 {
+    padding: 5px 20px;
+  }
+  .btn {
+    padding: 5px 20px;
+    font-size: 0.7rem;
+  }
+  .search__panel-01 input,
+  .search__panel-02 input,
+  .search__panel-03 select {
+    font-size: 0.7rem;
+  }
+}
+
+@media only screen and (max-width: 576px){
+  .search__panel-02{
+    display: none;
+  }
+}
