@@ -52,7 +52,7 @@ export function JobLists() {
               <button onClick={locationSearchHandler}>Search</button>
             </div>
 
-            <div className="search__panel3">
+            <div className="search__panel-03">
               <select onChange={filterJobData}>
                 <option >Filter work by</option>
                 <option value="full-time">Full Time</option>
